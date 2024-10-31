@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+<style>
+
+@font-face {
+   font-family: spartanmb_black;
+   src: url(spartan-mb.black.otf);
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #fff4f0;
+  font-family: 'Libre Baskerville';
+  font-size: 15px;
+  color: #545454;
+}
+
+
+
+#navbar {
+  overflow: hidden;
+  z-index: 100;
+  background-color: #0a7277;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: #fff4f0;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #a7d2dd;
+  color: #0a7277;
+}
+
+h1 {
+    	font-family: 'spartanmb_black';
+	font-size: 42px;
+	font-weight: 100;
+	color: #fff4f0;
+}
+
+h2 {
+	font-family: 'Libre Baskerville';
+	font-size: 18px;
+	font-weight: thin;
+	font-style: oblique;
+	line-height: 30%;
+	color: #fff4f0;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("MHS_Banner1.png");
+  height: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.abstract {
+
+  color: #545454;
+  background-color:#a7d2dd;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #ffc24a;
+}
+
+footer {
+	background-color: #545454;
+	color: #f47068;
+	text-align: center;
+	font-size: 10px;
+	padding:5px;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div class="hero-image">
+<div id="navbar">
+  <a href="#home">Home</a>
+  <a href="#bio">Bio</a>
+  <a href="#cv">CV</a>
+  <a href="#publications">Publications</a>
+  <a href="#philosophy">Teaching Philosophy</a>
+</div>
+  <div class="hero-text">
+    <h1>MEL HARDY-SKEBERDIS</h1>
+    <h2>(Almost) Ph.D.</h2>
+  </div>
+</div>
+
+
+<P style="text-align:center; font-size:30px"><STRONG>Mel's dissertation defense is in:<p id="defense" style="text-align:center; font-size: 30px"></p></p></STRONG>
+
+<div class="abstract" style="padding: 10px; margin: 50px"><p style="color: #ffc24a;"><B>Abstract:</B></p>
+<p>
+This is where the abstract will go once I write it.
+</p>
+</div>
+</div>
+
+
+<footer>Website designed and coded by Mel Hardy-Skeberdis, 2024.</footer>
+
+
+
+<script>
+// Script for the countdown timer
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 3,2024 12:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("defense").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
