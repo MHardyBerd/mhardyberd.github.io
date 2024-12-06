@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+<style>
+
+@font-face {
+   font-family: spartanmb_black;
+   src: url(spartan-mb.black.otf);
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #fff4f0;
+  font-family: 'Libre Baskerville';
+  font-size: 15px;
+  color: #545454;
+}
+
+#navbar {
+  overflow: hidden;
+  background-image: url(namebar.png);
+  z-index: 100;
+  background-color: #0a7277;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: #fff4f0;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  background-color: #a7d2dd;
+  color: #0a7277;
+}
+
+h1 {
+    font-family: 'spartanmb_black';
+	font-size: 42px;
+	font-weight: 100;
+	color: #fff4f0;
+}
+
+h2 {
+	font-family: 'Libre Baskerville';
+	font-size: 18px;
+	font-weight: thin;
+	font-style: oblique;
+	line-height: 30%;
+	color: #fff4f0;
+}
+
+footer {
+	background-color: #545454;
+	color: #f47068;
+	text-align: center;
+	font-size: 10px;
+	padding:5px;
+}
+
+</style>
+</head>
+
+<body>
+
+	<div id="navbar">
+		<a href="#home">Home</a>
+		<a href="#bio">Bio</a>
+		<a href="#cv">CV</a>
+		<a href="#publications">Publications</a>
+		<a href="#resources">Research & Resources</a>
+		<a href="#philosophy">Teaching Philosophy</a>
+	</div>
+
+	<p margin=50px> Peercy, M.M., Hardy-Skeberdis, M., & Crawford, J. (2024). “Because we bilingual”: Examining an early career ESOL teacher’s humanizing approach to language use. Linguistics and Education, 83, 101337. https://doi.org/10.1016/j.linged.2024.101337
+
+Peercy, M.M., Troyan, F.J., Fredricks, D.E., & Hardy-Skeberdis, M. (2024). Calling for a humanizing turn in language teacher education: Problematizing content and language instruction. TESOL Quarterly. https://doi:10.1002/tesq/3319 
+	</p>
+<footer>Website designed and coded by Mel Hardy-Skeberdis, 2024.</footer>
+
+<script>
+// Script for the countdown timer
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 3,2024 12:30:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("defense").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
